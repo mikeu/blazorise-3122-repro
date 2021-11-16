@@ -42,6 +42,7 @@ namespace BlazoriseApp
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.MapWhen(context => !context.Request.Path.StartsWithSegments("/subdir"), api =>
             {
                 api.UseRouting();
